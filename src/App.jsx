@@ -7,7 +7,10 @@ import './App.css'
  */
 export const App = () => {
   const [ dogUrl, setDogUrl ] = useState("https://images.dog.ceo/breeds/pug/n02110958_14768.jpg");
-
+  const ImageChange = () => {
+    console.log("更新ボタンが押されました")
+    setDogUrl("https://images.dog.ceo/breeds/springer-english/n02102040_5429.jpg");
+  }
 
   return (
     <div>
@@ -18,7 +21,7 @@ export const App = () => {
         <p>犬の画像を表示するサイトです</p>
         <img src={dogUrl} alt="" />
       </div>
-      <button>更新</button>
+      <button onClick={ImageChange}>更新</button>
     </div>
   )
 }
